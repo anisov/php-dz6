@@ -1,0 +1,12 @@
+<h2>Список пользователей</h2>
+{% for user in users %}
+<table width="40%" border="1px solid black" cellspacing="0" cellpadding="0">
+    {% for k,v in user %}
+        <tr>
+            <td width = '30%'>{{ k }}</td>
+            <td>{{ v }}</td>
+        </tr>
+    {% endfor %}
+</table>
+    <br>
+{% endfor %}

@@ -1,0 +1,38 @@
+<h2>Список зазов</h2>
+{% for order in orders %}
+<table width="40%" border="1px solid black" cellspacing="0" cellpadding="0">
+    {% for k,v in order %}
+        {% if k == 'money' %}
+            {% if v == 1 %}
+                <tr>
+                    <td width = '30%'>{{ k }}</td>
+                    <td>Потребуется сдача</td>
+                </tr>
+            {% else %}
+            <tr>
+                <td width = '30%'>{{ k }}</td>
+                <td>Оплата по карте</td>
+            </tr>
+            {% endif %}
+        {% elseif k == 'callback' %}
+            {% if v == 1 %}
+                <tr>
+                    <td width = '30%'>{{ k }}</td>
+                    <td>Не перезванивать</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td width = '30%'>{{ k }}</td>
+                    <td>Перезвонить</td>
+                </tr>
+            {% endif %}
+        {% else %}
+            <tr>
+                <td width = '30%'>{{ k }}</td>
+                <td>{{ v }}</td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+</table>
+<br>
+{% endfor %}
