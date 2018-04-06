@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__."/../vendor/autoload.php";
+require_once __DIR__ . "/../vendor/autoload.php";
 // начинаем работать с сессией
 session_start();
 $appDir = realpath(__DIR__ . '/../app');
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_URI'] == "/admin/users" or $_SERVER['REQUEST_URI'] == "/ad
 }
 
 // просмотр заказов (административная панель)
-    if ($_SERVER['REQUEST_URI'] == "/admin/orders" or $_SERVER['REQUEST_URI'] == "/admin/orders/") {
+if ($_SERVER['REQUEST_URI'] == "/admin/orders" or $_SERVER['REQUEST_URI'] == "/admin/orders/") {
     require_once($appDir . DIRECTORY_SEPARATOR . 'controllers/adminOrders.php');
     return 0;
 }

@@ -1,4 +1,5 @@
 <?php
+
 use ReCaptcha\ReCaptcha;
 
 function orderAddSendEmail($DBH)
@@ -59,6 +60,7 @@ function orderAddSendEmail($DBH)
     }
 
 }
+
 $DBH = getConnect();
 orderAddSendEmail($DBH);
 

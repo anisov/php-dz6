@@ -1,6 +1,6 @@
 <?php
 function sendPhpMail($countOrder, $name, $phone, $email, $street, $home, $housing, $apartment, $floor,
-                  $comment, $money, $callback)
+                     $comment, $money, $callback)
 {
     if ($money) {
         $money = 'Потребуется сдача';
@@ -60,6 +60,6 @@ function sendPhpMail($countOrder, $name, $phone, $email, $street, $home, $housin
     $mail->CharSet = 'UTF-8';
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Письмо с сайта ' . date('d.m.Y H:i:s', time());
-    $mail->Body    = $mail_message;
+    $mail->Body = $mail_message;
     return $mail->send();
 }
